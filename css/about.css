@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::after,
+::before {
+  box-sizing: unset;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: white;
+}
+
+.section-padding {
+  padding: 140px 0;
+}
+
+/* Navbar*/
+.navbar-nav {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  margin: 0 15px;
+}
+
+.navbar-nav a {
+  position: relative;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  margin: 0 10px;
+}
+.navbar-nav a:after {
+  content: "";
+  position: absolute;
+  background-color: #d51091;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s;
+}
+.navbar-nav a:hover:after {
+  width: 100%;
+}
+
+.navbar-brand {
+  color: #000;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  pointer-events: none;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #666;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #000;
+}
+/* End */
+
+/* Content */
+.content {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+}
+
+.center {
+  text-align: center;
+}
+.content .container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
+  padding-right: 15px;
+}
+
+.content .vid-desc {
+  margin: 10px 0;
+  line-height: 26px;
+  text-align: left;
+  font-size: 16px;
+  font-family: "franklin_gothic_bookregular", sans-serif;
+}
+/* End */
+
+/* Menu Footer */
+.menu {
+  padding: 30px 10px 0 10px;
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.menu ul li {
+  list-style: none;
+  display: inline-block;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu ul li .bi {
+  color: #d51091;
+}
+
+.menu ul li a:hover {
+  color: #d51091;
+}
+
+/* End */
+
+/* Street */
+.copyright {
+  display: block;
+  background-color: #e8e9e9;
+}
+.center {
+  text-align: center;
+}
+.copyright ul {
+  margin: 60px 0 0;
+  padding: 20px 0 40px;
+}
+
+.copyright ul li {
+  list-style: none;
+  display: inline-block;
+  text-align: left;
+  margin-top: 20px;
+  padding: 0 15px;
+  font-size: 12px;
+  vertical-align: top;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.copyright .center h3 {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+/* End */
+/* End */
+
+/* Android Version */
+
+/* Navbar */
+@media only screen and (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+}
+/* End */
+
+/* About */
+@media (min-width: 768px) {
+  .content .container {
+    width: 750px;
+  }
+}
+
+@media (max-width: 980px) {
+  video.vid-resphonesive {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+/* End */
+/* Footer */
+@media screen and (max-width: 900px) {
+  footer {
+    position: relative;
+    bottom: 0px;
+  }
+}
+
+/* menu */
+@media only screen and (max-width: 767px) {
+  .menu {
+    margin-right: 20px;
+  }
+  .menu ul li {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .menu {
+    margin-right: 25px;
+  }
+}
+
+/* Copyright */
+@media (max-width: 450px) {
+  .copyright ul li {
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 15px 0;
+  }
+}
+/* End */
+/* End */

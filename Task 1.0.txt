@@ -1,0 +1,6 @@
+TASK :
+1. Referensi Chuosenko (simple tapi Interesting)
+2. About, Client, Contact without Banner ^^
+3. Services PopUp
+4. Home Banner 1 ^^
+5. Font Navbar di renggang jarak dan Hover.  ^^

@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+::after,
+::before {
+  box-sizing: unset;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+}
+
+.section-padding {
+  padding: 140px 0;
+}
+
+/* Navbar*/
+.navbar {
+  margin-bottom: 120px;
+}
+.navbar-nav {
+  position: relative;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  margin: 0 15px;
+}
+
+.navbar-nav a {
+  position: relative;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  margin: 0 10px;
+}
+.navbar-nav a:after {
+  content: "";
+  position: absolute;
+  background-color: #d51091;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s;
+}
+.navbar-nav a:hover:after {
+  width: 100%;
+}
+
+.navbar-brand {
+  color: #000;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  pointer-events: none;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #666;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #000;
+}
+/* End */
+
+/* Main */
+#main {
+  position: relative;
+}
+#main .tag {
+  float: none;
+  margin: 0 auto;
+  line-height: 26px;
+  font-size: 16px;
+  font-family: "franklin_gothic_bookregular", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+#main span {
+  color: #000a45;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* --- Start progress bar --- */
+#main .process-wrapper {
+  margin: auto;
+  max-width: 1080px;
+  position: relative;
+}
+
+#main #progress-bar-container {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  height: 100px;
+  margin-top: 65px;
+}
+
+#main #progress-bar-container ul {
+  padding: 0;
+  margin: 0;
+  padding-top: 15px;
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+}
+
+#main #progress-bar-container li:before {
+  content: " ";
+  display: block;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all ease 0.3s;
+}
+
+#main #progress-bar-container li {
+  position: relative;
+  list-style: none;
+  float: left;
+  width: 20%;
+  height: 60px;
+  margin: 0px 64px;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+}
+#main #progress-bar-container li h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#main #progress-bar-container li .step-inner {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-size: 14px;
+}
+
+#main #progress-bar-container li.active,
+#main #progress-bar-container li:hover {
+  color: black;
+}
+
+#main #progress-bar-container li:after {
+  content: " ";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  margin: auto;
+  border: solid 7px #d51091;
+  border-radius: 50%;
+  margin-top: 45px;
+  box-shadow: 0 2px 13px -1px rgba(0, 0, 0, 0.3);
+  transition: all ease 0.2s;
+}
+
+#main #progress-bar-container #line {
+  width: 67%;
+  margin: auto;
+  background: #d51091;
+  height: 6px;
+  position: absolute;
+  left: 16%;
+  top: 57px;
+  z-index: -1;
+  border-radius: 50px;
+  transition: all ease 0.9s;
+}
+
+#main #progress-bar-container #line-progress {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50px;
+  transition: all ease 0.9s;
+}
+
+#main #progress-content-section {
+  width: 60%;
+  margin: auto;
+  background: #fa69da;
+  border-radius: 4px;
+}
+
+#main #progress-content-section .section-content {
+  padding: 30px 40px;
+  text-align: center;
+}
+
+#main #progress-content-section .section-content h2 {
+  font-size: 17px;
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 1px;
+}
+
+#main #progress-content-section .section-content p {
+  font-size: 16px;
+  line-height: 1.8em;
+  color: black;
+}
+
+#main #progress-content-section .section-content {
+  display: none;
+  animation: FadeInUp 700ms ease 1;
+  animation-fill-mode: forwards;
+  transform: translateY(15px);
+  opacity: 0;
+}
+
+#main #progress-content-section .section-content.active {
+  display: block;
+}
+
+@keyframes FadeInUp {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/* End */
+
+/*Footer */
+.menu {
+  padding: 30px 10px 0 10px;
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.menu ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.menu ul li .bi {
+  color: #d51091;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu ul li a:hover {
+  color: #d51091;
+}
+/* End */
+
+/* Street */
+.copyright {
+  display: block;
+  background-color: #e8e9e9;
+}
+.center {
+  text-align: center;
+}
+.copyright ul {
+  margin: 60px 0 0;
+  padding: 20px 0 40px;
+}
+
+.copyright ul li {
+  list-style: none;
+  display: inline-block;
+  text-align: left;
+  margin-top: 20px;
+  padding: 0 15px;
+  font-size: 12px;
+  vertical-align: top;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.copyright .center h3 {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+/* End */
+/* End */
+
+/* Android Version */
+
+/* Navbar */
+@media only screen and (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+}
+/* End */
+
+/* Footer */
+@media screen and (max-width: 900px) {
+  footer {
+    position: relative;
+    bottom: 0px;
+  }
+}
+
+/* menu */
+@media only screen and (max-width: 767px) {
+  .menu {
+    margin-right: 20px;
+  }
+  .menu ul li {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .menu {
+    margin-right: 25px;
+  }
+}
+
+/* Copyright */
+@media (max-width: 450px) {
+  .copyright ul li {
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 15px 0;
+  }
+}
+/* End */
+/* End */
